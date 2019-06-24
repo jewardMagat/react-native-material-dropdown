@@ -147,6 +147,7 @@ export default class Dropdown extends PureComponent {
     renderAccessory: PropTypes.func,
 
     containerStyle: (ViewPropTypes || View.propTypes).style,
+    textInputStyle: (ViewPropTypes || View.propTypes).style,
     overlayStyle: (ViewPropTypes || View.propTypes).style,
     pickerStyle: (ViewPropTypes || View.propTypes).style,
 
@@ -514,6 +515,7 @@ export default class Dropdown extends PureComponent {
         editable={false}
         onChangeText={undefined}
         renderAccessory={renderAccessory}
+        style={this.props.textInputStyle}
       />
     );
   }
