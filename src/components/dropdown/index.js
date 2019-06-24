@@ -137,6 +137,7 @@ export default class Dropdown extends PureComponent {
 
     itemCount: PropTypes.number,
     itemPadding: PropTypes.number,
+    lineWidth: PropTypes.number,
 
     onLayout: PropTypes.func,
     onFocus: PropTypes.func,
@@ -147,7 +148,6 @@ export default class Dropdown extends PureComponent {
     renderAccessory: PropTypes.func,
 
     containerStyle: (ViewPropTypes || View.propTypes).style,
-    textInputStyle: (ViewPropTypes || View.propTypes).style,
     overlayStyle: (ViewPropTypes || View.propTypes).style,
     pickerStyle: (ViewPropTypes || View.propTypes).style,
 
@@ -515,7 +515,7 @@ export default class Dropdown extends PureComponent {
         editable={false}
         onChangeText={undefined}
         renderAccessory={renderAccessory}
-        style={this.props.textInputStyle}
+        lineWidth={lineWidth}
       />
     );
   }
